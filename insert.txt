@@ -1,0 +1,22 @@
+console.log("Mongo db");
+
+// show all database
+show dbs
+
+// create and use(shift) in database
+use rohitcart
+
+// show all table in database
+show collections
+
+// show all row in (items) table
+db.items.find()
+
+// insert One item
+db.items.insertOne({ name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98 })
+
+// insert Many item
+db.items.insertMany([{ name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98 }, { name: "Moto 30s", price: 29000, rating: 3.5, qty: 233, sold: 198 }, { name: "Reailme 30s", price: 122000, rating: 2.5, qty: 633, sold: 198 }])
+
+// insert One item in more fields
+db.items.insertOne({ name: "Samsung 30s", price: 22000, rating: 4.5, qty: 233, sold: 98, os: "lolipop" })

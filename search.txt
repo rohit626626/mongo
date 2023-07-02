@@ -1,0 +1,29 @@
+console.log("search data");
+
+// searching  data 
+
+// show data rating is 3.5
+db.items.find({ rating: 3.5 })
+
+
+
+// show data rating is greater then 3.5
+db.items.find({ rating: { $gt: 3.5 } })
+
+// show data rating is greater then equil 3.5
+db.items.find({ rating: { $gte: 3.5 } })
+
+// show data rating is greater then 3.5 and price greater then 2000
+db.items.find({ rating: { $gt: 3.5 }, price: { $gt: 2000 } })
+
+// show data rating is less then 3.5
+db.items.find({ rating: { $lt: 3.5 } })
+
+// show data rating is greater then 3.5 or price greater the 2000
+db.items.find({ $or: [{ rating: { $gt: 3.5 } }, { price: { $gt: 25000 } }] })
+
+// show data rating is 3.5 only show price column
+db.items.find({ rating: 3.5 }, { price: 1 })
+
+// show data rating is 3.5 price and qty column
+db.items.find({ rating: 3.5 }, { price: 1, qty: 1 })

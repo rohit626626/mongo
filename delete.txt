@@ -1,0 +1,8 @@
+console.log("delete data");
+// delete  data 
+
+// delete only one row his rating is 3.5
+db.items.deleteOne({ rating: 3.5 })
+
+// delete all row his rating is 4.5 
+db.items.deleteMany({ rating: 4.5 })

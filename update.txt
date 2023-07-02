@@ -1,0 +1,16 @@
+console.log("Mongo db");
+
+//update data
+
+// update One item in one column
+db.items.updateOne({ name: "Samsung 30s"}, {$set:{price: 12000}})
+
+
+// update One item in two or more column
+db.items.updateOne({ name: "Samsung 30s"}, {$set:{price: 12000, rating:2}})
+
+// update two or more item in one column
+db.items.updateMany({ sold: 198}, {$set:{price: 12000}})
+
+
+
